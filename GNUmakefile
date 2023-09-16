@@ -50,7 +50,8 @@ override CFLAGS += \
     -mno-mmx \
     -mno-sse \
     -mno-sse2 \
-    -mno-red-zone
+    -mno-red-zone \
+    -DGO_AWAY_CLANGD
 
 override CPPFLAGS := \
     -I. \
