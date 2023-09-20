@@ -121,11 +121,11 @@ EFI_STATUS efi_main(EFI_HANDLE ImageHandle, EFI_SYSTEM_TABLE *SystemTable) {
 
         uefi_call(gRT->GetTime(time, time_cap));
 
-        wchar_t hour[4];
+        wchar_t hour[4] = {0};
         itoa(time->Hour, hour, 10);
-        wchar_t minute[4];
+        wchar_t minute[4] = {0};
         itoa(time->Minute, minute, 10);
-        wchar_t second[4];
+        wchar_t second[4] = {0};
         itoa(time->Second, second, 10);
 
         print(stdout, L"Time");
